@@ -86,18 +86,20 @@ The following table shows all possible of the state machine and how they relate 
 </p>
 
 # Testing
+After the PCB assembly and basic functional tests followed thourough testing of the project's thermal performance and energy efficiency. The following screenshot of a thermal camera shows the bottom side of the PCB as it is operating near its maximum theoretical output power of 60W (20V and 3A load).
 <p align="center">
-  <img src="Images/Miscellaneous/thermal_image.jpg" width="500">
+  <img src="Images/Miscellaneous/thermal_image.jpg" width="400">
 </p>
+Furthermore, current and voltage measurement were done using an external DC supply for input and an ajustable electronic load for output. The input current and voltage were compared with the electronic load's pulled current and the boards output voltage and the two following graphs were drawn, which illustrate the efficiency of the board for votlage step-down (buck) and step-up (boost) operation. The global efficiency represent the real measured ratio whereas the conversion effeciency substracts the PCB's idle power consumption due to the LED displays for example.
+
 <p align="center">
   <img src="Images/Miscellaneous/buck_efficiency.png" width="450">
   &nbsp;&nbsp;
   <img src="Images/Miscellaneous/boost_efficiency.png" width="475">
 </p>
 
-
 # Documentation 
-For the final project poster, which was used as visual support for the final project demo, or the PCB schematics and project report (report is in French), see [Documentation](https://github.com/justinlalonde/Portable-Programmable-DC-Power-Supply/tree/50b5dae2a2250634cf91fb3bcf46d55140ee1e9c/Documentation). For the full ESP32 embedded C code, see [Firmware](https://github.com/justinlalonde/Portable-Programmable-DC-Power-Supply/tree/d0015435451c163994e33e4b49d970070d409dda/Firmware) or directly download the ESP-IDF project with the [ESP-IDF Project.zip](https://github.com/justinlalonde/Portable-Programmable-DC-Power-Supply/tree/main) file. 
+You can find the PCB-schematics as well as the full project report (report is in French) under [Documentation](https://github.com/justinlalonde/Portable-Programmable-DC-Power-Supply/tree/50b5dae2a2250634cf91fb3bcf46d55140ee1e9c/Documentation). 
 <p align="center">
-  <img src="Images/schematic_preview.png" width="500">
+  <img src="Images/Miscellaneous/schematic_preview.png" width="500">
 </p>
