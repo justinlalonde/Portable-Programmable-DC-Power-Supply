@@ -2,9 +2,9 @@
 A portable version of a DC adjustable bench supply that uses a lithium-ion battery with intuitive user controls and displays on the PCB surface.
 
 <p align="center">
-  <img src="Images/project_top.jpg" width="350">
+  <img src="Images/project_top.jpg" width="300">
   &nbsp;&nbsp;
-  <img src="Images/pcb_top.png" width="600">
+  <img src="Images/pcb_top.png" width="500">
 </p>
 
 # Project overview
@@ -17,9 +17,9 @@ The project involved three main stages:
 - Writing the embedded firmware for the _ESP32_ microcontroller responsible for system control and user interaction;
 
 <p align="center">
-  <img src="Images/pcb_bottom.png" width="350">
+  <img src="Images/pcb_bottom.png" width="325">
   &nbsp;&nbsp;
-  <img src="Images/assembly.png" width="275">
+  <img src="Images/assembly.png" width="250">
   &nbsp;&nbsp;
   <img src="Images/Miscellaneous/code_preview.png" width="350">
 </p>
@@ -46,9 +46,9 @@ Here are some key features and specs related to this project:
 - The system detects and indicates output short-circuits by displaying "_S.C._" on the blue row of displays (see image below);
 
 <p align="center">
-  <img src="Images/short_circuit_operation.jpg" width="450">
+  <img src="Images/short_circuit_operation.jpg" width="300">
   &nbsp;&nbsp;
-  <img src="Images/pcb_perspective.png" width="500">
+  <img src="Images/pcb_perspective.png" width="450">
 </p>
 
 # Hardware architecture
@@ -60,9 +60,9 @@ The central feature of this project is the DC-DC conversion happening with the [
 
 **POWER STAGES**:
 1. The input voltage from the connected DC power supply (battery) first goes through an input protection / switching stage. This input stage implements undervoltage and overvoltage lockout protections, inrush current limiting, and enables the rocker switch to disable the supply to the rest of the board ([LM74800](https://www.ti.com/lit/ds/symlink/lm7480-q1.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1783800356800)).
-2. The input voltage is then directed to an independent 5V buck converter [LMR51450](https://www.ti.com/lit/ds/symlink/lmr51440.pdf), as well as the main buck/boost converter ([TPS55287](https://www.ti.com/lit/ds/symlink/tps55287.pdf)) which converts it to an arbitrary, user-selected DC voltage target from 3V to 20V.
+2. The input voltage is then directed to an independent 5V buck converter [LMR51450](https://www.ti.com/lit/ds/symlink/lmr51440.pdf), as well as the main buck-boost converter ([TPS55287](https://www.ti.com/lit/ds/symlink/tps55287.pdf)) which converts it to an arbitrary, user-selected DC voltage target from 3V to 20V.
 3. The 5V that is generated from the independent buck converter is multiplexed with the bus voltage of the USB-C device port using a power multiplexer IC ([TPS2115](https://www.ti.com/lit/ds/symlink/tps2115.pdf?ts=1783787434649&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTPS2115)) before being regulated to 3.3V ([TLV76733](https://www.ti.com/lit/ds/symlink/tlv767.pdf?ts=1783784618184)) to power many ICs present on the board, more importantly the _ESP32_ module itself. This power multiplexing is to ensure that the _ESP32_ microcontroller can be programmed with only a USB-C connection without needing the presence of the main power source.
-4. On the other hand, the output voltage that is generated from the buck/boost converter then goes through an output protection / switching stage ([TPS259470](https://www.ti.com/lit/ds/symlink/tps25947.pdf)). This stage implements an E-Fuse integrated circuit, which has output current limiting, short-circuit protection and detection, undervoltage lockout, overvoltage lockout, and reverse current protection. This stage enables the rocker switch on the output side to enable and disable the output supply completely.
+4. On the other hand, the output voltage that is generated from the buck-boost converter then goes through an output protection / switching stage ([TPS259470](https://www.ti.com/lit/ds/symlink/tps25947.pdf)). This stage implements an E-Fuse integrated circuit, which has output current limiting, short-circuit protection and detection, undervoltage lockout, overvoltage lockout, and reverse current protection. This stage enables the rocker switch on the output side to enable and disable the output supply completely.
 
 **DIGITAL ICs**:
 1. Serial communication with the _ESP32_ requires a _USB-To-UART_ bridge IC ([CP2102N](https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf)).
