@@ -113,8 +113,12 @@ Furthermore, current and voltage measurements were done using an external DC sup
 </p>
 
 # Documentation 
-You can find the full PCB schematics as well as the project report (report in French) under the [Documentation](https://github.com/justinlalonde/Portable-Programmable-DC-Power-Supply/tree/50b5dae2a2250634cf91fb3bcf46d55140ee1e9c/Documentation) folder. 
+You can find the full PCB schematics as well as the project report and poster (report and poster in French) under the [Documentation](https://github.com/justinlalonde/Portable-Programmable-DC-Power-Supply/tree/50b5dae2a2250634cf91fb3bcf46d55140ee1e9c/Documentation) folder. 
 
 <p align="center">
   <img src="Images/Miscellaneous/schematic_preview.png" width="500">
+  &nbsp;&nbsp;
+  <img src="Images/Miscellaneous/report_preview.png" width="235">
+  &nbsp;&nbsp;
+  <img src="Images/Miscellaneous/poster_preview.png" width="500">
 </p>
