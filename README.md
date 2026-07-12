@@ -107,9 +107,9 @@ After the PCB assembly and basic functional tests followed a thorough testing ph
 Furthermore, current and voltage measurements were done using an external DC supply for input and an ajustable electronic load for output. The input current and voltage were compared with the electronic load's current consumption along with the board's output voltage, and the two following graphs were drawn, which illustrate the efficiency of voltage step-down (buck) and step-up (boost) operation. The global efficiency represents the real efficiency power ratio, whereas the conversion efficiency substracts the system's idle power consumption due to the LED displays and such.
 
 <p align="center">
-  <img src="Images/Miscellaneous/buck_efficiency.png" width="450">
+  <img src="Images/Miscellaneous/buck_efficiency.png" width="400">
   &nbsp;&nbsp;
-  <img src="Images/Miscellaneous/boost_efficiency.png" width="475">
+  <img src="Images/Miscellaneous/boost_efficiency.png" width="420">
 </p>
 
 # Documentation 
