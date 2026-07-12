@@ -1,6 +1,8 @@
 # Portable-Programmable-DC-Power-Supply
 A portable version of a DC adjustable bench supply that uses a lithium-ion battery with intuitive user controls and displays on the PCB surface.
 
+**January 2026 - April 2026**
+
 <p align="center">
   <img src="Images/project_top.jpg" width="300">
   &nbsp;&nbsp;
